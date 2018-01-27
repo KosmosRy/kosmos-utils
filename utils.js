@@ -42,7 +42,7 @@ const getUsers = async token => {
 };
 
 const getUserInfo = async (user, token) =>
-    fetchJson(formRequest("users.info", {user}, token));
+    fetchJson(formRequest("users.info", token, {user}));
 
 const getChannels = async token => {
     const channelList = await fetchJson(formRequest("channels.list", token));
