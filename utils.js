@@ -55,5 +55,5 @@ const getChannels = async token => {
 const postMessage = (message, token) => fetchJson(jsonRequest("chat.postMessage", token, message));
 
 module.exports = {
-    encodeForm, formRequest, fetchJson, getUsers, getUserInfo, getChannels, postMessage, getRequest
+    encodeForm, formRequest, jsonRequest, getRequest, fetchJson, getUsers, getUserInfo, getChannels, postMessage
 };
