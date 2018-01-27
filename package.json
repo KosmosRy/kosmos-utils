@@ -1,6 +1,6 @@
 {
   "name": "kosmos-utils",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Yleisiä työkaluja Kosmos-appsien käyttöön",
   "main": "utils.js",
   "repository": "github:KosmosRy/kosmos-utils",
