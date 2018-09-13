@@ -1,5 +1,4 @@
 require("isomorphic-fetch");
-const {Pool} = require("pg");
 
 const slackApiUrl = "https://slack.com/api";
 
@@ -55,23 +54,6 @@ const getChannels = async token => {
 
 const postMessage = (message, token) => fetchJson(jsonRequest("chat.postMessage", token, message));
 
-const puraisuDB = (connectionString, source) => {
-    const pool = new Pool({connectionString});
-
-    const insertPuraisu = (user, type, content, location, info, pf, coordinates, timestamp = new Date()) => {
-        console.log("Inserting puraisu");
-        return pool.query(
-            `INSERT INTO puraisu (type, content, location, info, source, biter, postfestum, coordinates, timestamp) 
-            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)`,
-            [type, content, location, info, source, user, pf, coordinates, timestamp]
-        );
-    };
-
-    return {
-        pool, insertPuraisu
-    };
-};
-
 module.exports = {
     encodeForm,
     formRequest,
@@ -81,6 +63,5 @@ module.exports = {
     getUsers,
     getUserInfo,
     getChannels,
-    postMessage,
-    puraisuDB
+    postMessage
 };

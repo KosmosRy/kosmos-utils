@@ -1,6 +1,6 @@
 {
   "name": "kosmos-utils",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Yleisiä työkaluja Kosmos-appsien käyttöön",
   "main": "utils.js",
   "repository": "github:KosmosRy/kosmos-utils",
@@ -8,8 +8,7 @@
   "license": "Unlicense",
   "private": false,
   "dependencies": {
-    "isomorphic-fetch": "^2.2.1",
-    "pg": "^7.4.1"
+    "isomorphic-fetch": "^2.2.1"
   },
   "devDependencies": {
     "eslint": "^4.16.0"
